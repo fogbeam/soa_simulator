@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RFQ xmlns="http://www.openapplications.org/oagis/9" 
+        xmlns:ns2="urn:swift:xsd:$pain.001.001.01"
+	xmlns:ns3="urn:swift:xsd:$pain.002.001.01" test="true" territory="west">
+	<RFQHeader>
+		<DocumentDateTime>2012-02-25 01:45:00.000 EDT</DocumentDateTime>
+		<CustomerParty>
+			<CustomerAccountID>12345XZQR</CustomerAccountID>
+		</CustomerParty>
+		<SupplierParty>
+			<AccountID>12345QQQX</AccountID>
+		</SupplierParty>
+		<CatalogReference>
+			<DocumentID>
+				<ID>12345ZBBX</ID>
+			</DocumentID>
+		</CatalogReference>
+		<TotalAmount currencyID="USD">200</TotalAmount>
+		<QualifiedAmount>
+			<Amount currencyID="USD">240</Amount>
+		</QualifiedAmount>
+		<PartialShipmentAllowedIndicator>true</PartialShipmentAllowedIndicator>
+		<DropShipmentAllowedIndicator>true</DropShipmentAllowedIndicator>
+		<EarlyShipmentAllowedIndicator>false</EarlyShipmentAllowedIndicator>
+		<BuyerParty category="Doomaflunkie">
+			<AccountID>12345ABXZ</AccountID>
+		</BuyerParty>
+	</RFQHeader>
+	<RFQLine>
+		<Item>
+			<ManufacturerItemID>
+				<ID>ARX23457</ID>
+			</ManufacturerItemID>
+		</Item>
+		<Quantity>2</Quantity>
+		<ExtendedAmount currencyID="USD">200</ExtendedAmount>
+	</RFQLine>
+</RFQ>

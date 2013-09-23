@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- ====================================================================== 
+     Feb 9, 2013 7:22:28 PM                                                        
+
+     camel-jms    
+     A little test sender thing to send simulated event messages
+                       
+     prhodes                                                                
+     ====================================================================== -->
+<project name="camel-jms" default="compile">
+    
+	<description>
+    	A little test sender thing to send simulated event messages
+    </description>
+
+	<path id="build.classpath">
+		<fileset dir="lib">
+	        <include name="**/*.jar"/>
+	      </fileset>
+	</path>	
+	
+	
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="init" description="init">
+    	<mkdir dir="build" />
+    	<mkdir dir="build/conf" />
+    	<mkdir dir="build/classes" />
+    	<mkdir dir="dist" />
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: clean                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="clean">
+    	<delete dir="build" />
+    	<delete dir="dist" />
+    </target>	
+	
+	
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: compile                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="compile">
+        <javac srcdir="src" destdir="build/classes" debug="on" source="1.6" includeantruntime="false">
+        	<classpath refid="build.classpath" />
+		</javac>    
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: package                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="package">
+    	
+    	
+		<!-- create a property containing all .jar files, prefix lib/, and seperated with a space -->
+		<pathconvert property="libs.project" pathsep=" ">
+			<mapper>
+			  	<chainedmapper>
+			  		<!-- remove absolute path -->
+			    	<flattenmapper />
+			 
+			        <!-- add lib/ prefix -->
+			    	<globmapper from="*" to="lib/*" />
+			  	</chainedmapper>
+			</mapper>
+			 
+			<path>
+				<!-- lib.home contains all jar files, in several subdirectories -->
+			 	<fileset dir="lib">
+			    	<include name="**/*.jar" />
+				</fileset>
+			</path>
+		</pathconvert>
+    	
+    	
+    	<!-- create jar file -->
+    	<jar basedir="build/classes" destfile="build/camel-jms.jar" >
+    		<manifest>
+    		      <attribute name="Built-By" value="${user.name}" />
+    		      <attribute name="Main-Class" value="org.fogbeam.hatteras.camel.CamelJmsXmlSender" />
+    		      <!-- finally, use the magically generated libs path -->
+    		      <attribute name="Class-Path" value="${libs.project}" />
+    		    </manifest>    		
+    	</jar>
+    	
+    	<!-- copy files for final structure into build, create .zip bundle in dist -->
+    	
+    	<copy todir="build/conf">
+    		<fileset dir="src">
+    			<include name="applicationContext.xml" />
+    			<include name="senderContext.xml" />
+    		</fileset>
+    	</copy>
+    	
+    	<copy todir="build/lib">
+    		<fileset dir="lib">
+    			<include name="*.jar" />
+    		</fileset>
+    		<fileset dir="lib/jboss-client">
+    			<include name="*.jar" />
+    		</fileset>
+    	</copy>
+    	
+    	<copy todir="build">
+    		<fileset dir=".">
+    			<include name="test*.xml" />
+    		</fileset>
+    	</copy>
+    	
+    	<zip destfile="dist/camel-jms.zip">	
+    		<fileset dir="build" includes="**/*" excludes="classes/"/>
+    	</zip>	
+    	
+    </target>	
+	
+	
+</project>

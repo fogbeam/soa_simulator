@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+
+    ** OAGIS® Revision:    OAGIS 9_6_1  **
+    ** Date:               19 Aug 2011**
+    ** Copyright 1997-2011, All Rights Reserved **
+
+    This is an OAGIS® BOD XML Instance Example. 
+
+    The data examples between the brackets contained in this XML file are not meant to be real data. The data exists in order to show an example of an instance of XML that matches the corresponding XSD published by OAGi.
+
+    License information for this file is provided in the file **OAGi License Agreement.txt** that is provided with this download package.
+
+    For support, more information, or to report implementation bugs, please contact the Open Applications Group at oagis@openapplications.org.
+    
+     XML Instance 
+     
+    Name: OAGi-BPI-Platform/org_openapplications_oagis/9_6_1/Instances/BODs/ProcessSalesOrder.xml
+-->
+		
+<ProcessSalesOrder xmlns="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openapplications.org/oagis/9 ../../Global/BODs/ProcessSalesOrder/ProcessSalesOrder.xsd" languageCode="en-US" versionID="release" releaseID="release" systemEnvironmentCode="Production">
+        <ApplicationArea>
+                <Sender>
+                        <LogicalID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</LogicalID>
+                        <ComponentID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ComponentID>
+                        <TaskID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</TaskID>
+                        <ReferenceID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ReferenceID>
+                        <ConfirmationCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" name="String" listAgencyID="normalizedString">Always</ConfirmationCode>
+                        <AuthorizationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</AuthorizationID>
+                </Sender>
+                <CreationDateTime>1967-08-13</CreationDateTime>
+                <Signature qualifyingAgencyId="normalizedString"/>
+                <BODID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</BODID>
+                <UserArea/>
+        </ApplicationArea>
+        <DataArea>
+                <Process acknowledgeCode="Always">
+                        <ActionCriteria>
+                                <ActionExpression expressionLanguage="token" actionCode="Add">token</ActionExpression>
+                                <ChangeStatus>
+                                        <Code languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</Code>
+                                        <Description languageID="en-us">String</Description>
+                                        <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                        <ReasonCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</ReasonCode>
+                                        <Reason languageID="en-us">String</Reason>
+                                        <StateChange>
+                                                <FromStateCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</FromStateCode>
+                                                <ToStateCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</ToStateCode>
+                                                <ChangeDateTime>1967-08-13</ChangeDateTime>
+                                                <Description languageID="en-us">String</Description>
+                                                <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                                <UserArea/>
+                                        </StateChange>
+                                        <UserArea/>
+                                </ChangeStatus>
+                        </ActionCriteria>
+                </Process>
+                <SalesOrder>
+                        <SalesOrderHeader>
+                                <DocumentID agencyRole="Text">
+                                        <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                        <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                        <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                </DocumentID>
+                                <AlternateDocumentID agencyRole="Text">
+                                        <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                        <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                        <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                </AlternateDocumentID>
+                                <LastModificationDateTime>1967-08-13</LastModificationDateTime>
+                                <DocumentDateTime>1967-08-13</DocumentDateTime>
+                                <Description languageID="en-us">String</Description>
+                                <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                <DocumentReference type="token">
+                                        <DocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </DocumentID>
+                                        <AlternateDocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </AlternateDocumentID>
+                                        <DocumentDateTime>1967-08-13</DocumentDateTime>
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <StatusCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</StatusCode>
+                                        <UserArea/>
+                                </DocumentReference>
+                                <CustomerParty category="Organization">
+                                        <PartyIDs>
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <TaxID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</TaxID>
+                                                <DUNSID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</DUNSID>
+                                                <CAGEID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</CAGEID>
+                                                <DODAACID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</DODAACID>
+                                                <BICID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</BICID>
+                                        </PartyIDs>
+                                        <Name languageID="en-us">String</Name>
+                                        <Location type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Name languageID="en-us">String</Name>
+                                                <Directions languageID="en-us">String</Directions>
+                                                <Coordinate>
+                                                        <Latitude>
+                                                                <DegreeMeasure unitCode="normalizedString">3.1415926535897932384626433832795</DegreeMeasure>
+                                                                <MinuteMeasure unitCode="normalizedString">3.1415926535897932384626433832795</MinuteMeasure>
+                                                                <SecondMeasure unitCode="normalizedString">3.1415926535897932384626433832795</SecondMeasure>
+                                                                <DirectionCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</DirectionCode>
+                                                        </Latitude>
+                                                        <Longitude>
+                                                                <DegreeMeasure unitCode="normalizedString">3.1415926535897932384626433832795</DegreeMeasure>
+                                                                <MinuteMeasure unitCode="normalizedString">3.1415926535897932384626433832795</MinuteMeasure>
+                                                                <SecondMeasure unitCode="normalizedString">3.1415926535897932384626433832795</SecondMeasure>
+                                                                <DirectionCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</DirectionCode>
+                                                        </Longitude>
+                                                        <AltitudeMeasure unitCode="normalizedString">3.1415926535897932384626433832795</AltitudeMeasure>
+                                                        <UserArea/>
+                                                </Coordinate>
+                                                <Address languageCode="normalizedString">
+                                                        <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                        <FormatCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</FormatCode>
+                                                        <AttentionOfName languageID="en-us">String</AttentionOfName>
+                                                        <CareOfName languageID="en-us">String</CareOfName>
+                                                        <AddressLine sequence="2" languageID="en-us" sequenceName="normalizedString">String</AddressLine>
+                                                        <CitySubDivisionName languageID="en-us">String</CitySubDivisionName>
+                                                        <CityName languageID="en-us">String</CityName>
+                                                        <CountrySubDivisionCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</CountrySubDivisionCode>
+                                                        <CountryCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</CountryCode>
+                                                        <PostalCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</PostalCode>
+                                                        <Status>
+                                                                <Code languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</Code>
+                                                                <Description languageID="en-us">String</Description>
+                                                                <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                                                <ReasonCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</ReasonCode>
+                                                                <Reason languageID="en-us">String</Reason>
+                                                                <TimePeriod>
+                                                                        <StartDateTime>1967-08-13</StartDateTime>
+                                                                        <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                                </TimePeriod>
+                                                                <UserArea/>
+                                                        </Status>
+                                                        <Preference>
+                                                                <Sequence>2</Sequence>
+                                                                <Indicator>false</Indicator>
+                                                                <EffectiveTimePeriod>
+                                                                        <StartDateTime>1967-08-13</StartDateTime>
+                                                                        <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                                </EffectiveTimePeriod>
+                                                                <UserArea/>
+                                                        </Preference>
+                                                        <UserArea/>
+                                                </Address>
+                                                <Description languageID="en-us">String</Description>
+                                                <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                                <UserArea/>
+                                        </Location>
+                                        <Contact languageCode="normalizedString" type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Name languageID="en-us">String</Name>
+                                                <JobTitle languageID="en-us">String</JobTitle>
+                                                <Responsibility languageID="en-us">String</Responsibility>
+                                                <DepartmentName languageID="en-us">String</DepartmentName>
+                                                <Communication sequence="2" preferredIndicator="false">
+                                                        <ChannelCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</ChannelCode>
+                                                        <UseCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</UseCode>
+                                                        <CountryDialing languageID="en-us">String</CountryDialing>
+                                                        <AreaDialing languageID="en-us">String</AreaDialing>
+                                                        <DialNumber languageID="en-us">String</DialNumber>
+                                                        <Extension languageID="en-us">String</Extension>
+                                                        <Access languageID="en-us">String</Access>
+                                                        <Preference>
+                                                                <Sequence>2</Sequence>
+                                                                <Indicator>false</Indicator>
+                                                                <EffectiveTimePeriod>
+                                                                        <StartDateTime>1967-08-13</StartDateTime>
+                                                                        <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                                </EffectiveTimePeriod>
+                                                                <UserArea/>
+                                                        </Preference>
+                                                        <UserArea/>
+                                                </Communication>
+                                                <Preference>
+                                                        <Sequence>2</Sequence>
+                                                        <Indicator>false</Indicator>
+                                                        <EffectiveTimePeriod>
+                                                                <StartDateTime>1967-08-13</StartDateTime>
+                                                                <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                        </EffectiveTimePeriod>
+                                                        <UserArea/>
+                                                </Preference>
+                                                <UserArea/>
+                                        </Contact>
+                                        <CustomerAccountID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</CustomerAccountID>
+                                        <BuyerContact languageCode="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Name languageID="en-us">String</Name>
+                                                <JobTitle languageID="en-us">String</JobTitle>
+                                                <Responsibility languageID="en-us">String</Responsibility>
+                                                <DepartmentName languageID="en-us">String</DepartmentName>
+                                                <Communication sequence="2" preferredIndicator="false">
+                                                        <ChannelCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</ChannelCode>
+                                                        <UseCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</UseCode>
+                                                        <CountryDialing languageID="en-us">String</CountryDialing>
+                                                        <AreaDialing languageID="en-us">String</AreaDialing>
+                                                        <DialNumber languageID="en-us">String</DialNumber>
+                                                        <Extension languageID="en-us">String</Extension>
+                                                        <Access languageID="en-us">String</Access>
+                                                        <Preference>
+                                                                <Sequence>2</Sequence>
+                                                                <Indicator>false</Indicator>
+                                                                <EffectiveTimePeriod>
+                                                                        <StartDateTime>1967-08-13</StartDateTime>
+                                                                        <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                                </EffectiveTimePeriod>
+                                                                <UserArea/>
+                                                        </Preference>
+                                                        <UserArea/>
+                                                </Communication>
+                                                <Preference>
+                                                        <Sequence>2</Sequence>
+                                                        <Indicator>false</Indicator>
+                                                        <EffectiveTimePeriod>
+                                                                <StartDateTime>1967-08-13</StartDateTime>
+                                                                <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                        </EffectiveTimePeriod>
+                                                        <UserArea/>
+                                                </Preference>
+                                                <UserArea/>
+                                        </BuyerContact>
+                                        <ReceivingContact languageCode="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Name languageID="en-us">String</Name>
+                                                <JobTitle languageID="en-us">String</JobTitle>
+                                                <Responsibility languageID="en-us">String</Responsibility>
+                                                <DepartmentName languageID="en-us">String</DepartmentName>
+                                                <Communication sequence="2" preferredIndicator="false">
+                                                        <ChannelCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</ChannelCode>
+                                                        <UseCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</UseCode>
+                                                        <CountryDialing languageID="en-us">String</CountryDialing>
+                                                        <AreaDialing languageID="en-us">String</AreaDialing>
+                                                        <DialNumber languageID="en-us">String</DialNumber>
+                                                        <Extension languageID="en-us">String</Extension>
+                                                        <Access languageID="en-us">String</Access>
+                                                        <Preference>
+                                                                <Sequence>2</Sequence>
+                                                                <Indicator>false</Indicator>
+                                                                <EffectiveTimePeriod>
+                                                                        <StartDateTime>1967-08-13</StartDateTime>
+                                                                        <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                                </EffectiveTimePeriod>
+                                                                <UserArea/>
+                                                        </Preference>
+                                                        <UserArea/>
+                                                </Communication>
+                                                <Preference>
+                                                        <Sequence>2</Sequence>
+                                                        <Indicator>false</Indicator>
+                                                        <EffectiveTimePeriod>
+                                                                <StartDateTime>1967-08-13</StartDateTime>
+                                                                <Duration>P1Y2M3DT10H30M0S</Duration>
+                                                        </EffectiveTimePeriod>
+                                                        <UserArea/>
+                                                </Preference>
+                                                <UserArea/>
+                                        </ReceivingContact>
+                                        <UserArea/>
+                                </CustomerParty>
+                                <CatalogReference type="token">
+                                        <DocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </DocumentID>
+                                        <AlternateDocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </AlternateDocumentID>
+                                        <DocumentDateTime>1967-08-13</DocumentDateTime>
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <StatusCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</StatusCode>
+                                        <UserArea/>
+                                </CatalogReference>
+                                <ExtendedAmount currencyID="AED">3.1415926535897932384626433832795</ExtendedAmount>
+                                <TotalAmount currencyID="AED">3.1415926535897932384626433832795</TotalAmount>
+                                <EnterpriseUnit>
+                                        <CostCenterID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</CostCenterID>
+                                        <ProfitCenterID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ProfitCenterID>
+                                        <GLEntityID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</GLEntityID>
+                                        <GLElement>
+                                                <Element sequence="2" languageID="en-us" sequenceName="normalizedString">String</Element>
+                                        </GLElement>
+                                        <UserArea/>
+                                </EnterpriseUnit>
+                                <PartialShipmentAllowedIndicator>false</PartialShipmentAllowedIndicator>
+                                <DropShipmentAllowedIndicator>false</DropShipmentAllowedIndicator>
+                                <EarlyShipmentAllowedIndicator>false</EarlyShipmentAllowedIndicator>
+                                <LicenseIndicator name="Import">false</LicenseIndicator>
+                                <TaxExemptIndicator>false</TaxExemptIndicator>
+                                <PaymentTerm type="Net20">
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <Term type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Description languageID="en-us">String</Description>
+                                                <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                                <DueDateTime>1967-08-13</DueDateTime>
+                                                <DiscountPercent>3.1415926535897932384626433832795</DiscountPercent>
+                                                <ProxMonth>2</ProxMonth>
+                                                <ProxDayOfMonth>01</ProxDayOfMonth>
+                                                <UserArea/>
+                                        </Term>
+                                        <Discount type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Description languageID="en-us">String</Description>
+                                                <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                                <DueDateTime>1967-08-13</DueDateTime>
+                                                <DiscountPercent>3.1415926535897932384626433832795</DiscountPercent>
+                                                <ProxMonth>2</ProxMonth>
+                                                <ProxDayOfMonth>01</ProxDayOfMonth>
+                                                <UserArea/>
+                                        </Discount>
+                                        <Penalty type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Description languageID="en-us">String</Description>
+                                                <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                                <DueDateTime>1967-08-13</DueDateTime>
+                                                <DiscountPercent>3.1415926535897932384626433832795</DiscountPercent>
+                                                <ProxMonth>2</ProxMonth>
+                                                <ProxDayOfMonth>01</ProxDayOfMonth>
+                                                <UserArea/>
+                                        </Penalty>
+                                        <UserArea/>
+                                </PaymentTerm>
+                                <SpecialPriceAuthorizationCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</SpecialPriceAuthorizationCode>
+                                <EarliestShipDateTime>1967-08-13</EarliestShipDateTime>
+                                <RequestedShipDateTime>1967-08-13</RequestedShipDateTime>
+                                <PromisedShipDateTime>1967-08-13</PromisedShipDateTime>
+                                <PromisedDeliveryDateTime>1967-08-13</PromisedDeliveryDateTime>
+                                <PaymentMethodCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">Cash</PaymentMethodCode>
+                                <Payment>
+                                        <CashIndicator>false</CashIndicator>
+                                        <Amount currencyID="AED">3.1415926535897932384626433832795</Amount>
+                                        <UserArea/>
+                                </Payment>
+                                <BackOrderIndicator>false</BackOrderIndicator>
+                                <SalesOrganizationIDs>
+                                        <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" name="normalizedString" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                </SalesOrganizationIDs>
+                                <DistributionCenterCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</DistributionCenterCode>
+                                <PurchaseOrderReference>
+                                        <DocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </DocumentID>
+                                        <AlternateDocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </AlternateDocumentID>
+                                        <DocumentDateTime>1967-08-13</DocumentDateTime>
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <StatusCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</StatusCode>
+                                        <ReleaseNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ReleaseNumber>
+                                        <LineNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</LineNumber>
+                                        <ScheduleLineNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ScheduleLineNumber>
+                                        <SubLineNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</SubLineNumber>
+                                        <UserArea/>
+                                </PurchaseOrderReference>
+                                <UserArea/>
+                        </SalesOrderHeader>
+                        <SalesOrderLine>
+                                <LineNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</LineNumber>
+                                <Description languageID="en-us">String</Description>
+                                <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                <DocumentReference type="token">
+                                        <DocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </DocumentID>
+                                        <AlternateDocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </AlternateDocumentID>
+                                        <DocumentDateTime>1967-08-13</DocumentDateTime>
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <StatusCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</StatusCode>
+                                        <UserArea/>
+                                </DocumentReference>
+                                <Item>
+                                        <ItemID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </ItemID>
+                                        <CustomerItemID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </CustomerItemID>
+                                        <ManufacturerItemID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </ManufacturerItemID>
+                                        <SupplierItemID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </SupplierItemID>
+                                        <UPCID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</UPCID>
+                                        <EPCID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</EPCID>
+                                        <ServiceIndicator>false</ServiceIndicator>
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <SerialNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</SerialNumber>
+                                        <UserArea/>
+                                </Item>
+                                <SerialNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</SerialNumber>
+                                <RFID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RFID>
+                                <Quantity unitCode="normalizedString">3.1415926535897932384626433832795</Quantity>
+                                <UnitPrice>
+                                        <Amount currencyID="AED">3.1415926535897932384626433832795</Amount>
+                                        <PerQuantity unitCode="normalizedString">3.1415926535897932384626433832795</PerQuantity>
+                                        <Code languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</Code>
+                                        <TimePeriod>
+                                                <StartDateTime>1967-08-13</StartDateTime>
+                                                <Duration>P1Y2M3DT10H30M0S</Duration>
+                                        </TimePeriod>
+                                </UnitPrice>
+                                <ExtendedAmount currencyID="AED">3.1415926535897932384626433832795</ExtendedAmount>
+                                <TotalAmount currencyID="AED">3.1415926535897932384626433832795</TotalAmount>
+                                <CatalogReference type="token">
+                                        <DocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </DocumentID>
+                                        <AlternateDocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </AlternateDocumentID>
+                                        <DocumentDateTime>1967-08-13</DocumentDateTime>
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <StatusCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</StatusCode>
+                                        <UserArea/>
+                                </CatalogReference>
+                                <RequiredDeliveryDateTime>1967-08-13</RequiredDeliveryDateTime>
+                                <AllowSubstitutionIndicator>false</AllowSubstitutionIndicator>
+                                <PartialShipmentAllowedIndicator>false</PartialShipmentAllowedIndicator>
+                                <DropShipmentAllowedIndicator>false</DropShipmentAllowedIndicator>
+                                <EarlyShipmentAllowedIndicator>false</EarlyShipmentAllowedIndicator>
+                                <LicenseIndicator name="Import">false</LicenseIndicator>
+                                <PaymentTerm type="Net20">
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <Term type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Description languageID="en-us">String</Description>
+                                                <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                                <DueDateTime>1967-08-13</DueDateTime>
+                                                <DiscountPercent>3.1415926535897932384626433832795</DiscountPercent>
+                                                <ProxMonth>2</ProxMonth>
+                                                <ProxDayOfMonth>01</ProxDayOfMonth>
+                                                <UserArea/>
+                                        </Term>
+                                        <Discount type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Description languageID="en-us">String</Description>
+                                                <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                                <DueDateTime>1967-08-13</DueDateTime>
+                                                <DiscountPercent>3.1415926535897932384626433832795</DiscountPercent>
+                                                <ProxMonth>2</ProxMonth>
+                                                <ProxDayOfMonth>01</ProxDayOfMonth>
+                                                <UserArea/>
+                                        </Discount>
+                                        <Penalty type="normalizedString">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <Description languageID="en-us">String</Description>
+                                                <EffectiveDateTime>1967-08-13</EffectiveDateTime>
+                                                <DueDateTime>1967-08-13</DueDateTime>
+                                                <DiscountPercent>3.1415926535897932384626433832795</DiscountPercent>
+                                                <ProxMonth>2</ProxMonth>
+                                                <ProxDayOfMonth>01</ProxDayOfMonth>
+                                                <UserArea/>
+                                        </Penalty>
+                                        <UserArea/>
+                                </PaymentTerm>
+                                <SpecialPriceAuthorizationCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</SpecialPriceAuthorizationCode>
+                                <SubstituteItemIndicator>false</SubstituteItemIndicator>
+                                <BackOrderIndicator>false</BackOrderIndicator>
+                                <PurchaseOrderReference>
+                                        <DocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </DocumentID>
+                                        <AlternateDocumentID agencyRole="Text">
+                                                <ID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ID>
+                                                <RevisionID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</RevisionID>
+                                                <VariationID schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</VariationID>
+                                        </AlternateDocumentID>
+                                        <DocumentDateTime>1967-08-13</DocumentDateTime>
+                                        <Description languageID="en-us">String</Description>
+                                        <Note languageID="en-us" author="String" entryDateTime="1967-08-13" status="String">String</Note>
+                                        <StatusCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</StatusCode>
+                                        <ReleaseNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ReleaseNumber>
+                                        <LineNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</LineNumber>
+                                        <ScheduleLineNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</ScheduleLineNumber>
+                                        <SubLineNumber schemeAgencyName="String" schemeAgencyID="normalizedString" schemeVersionID="normalizedString" schemeName="String" schemeURI="http://www.openapplications.org" schemeID="normalizedString" schemeDataURI="http://www.openapplications.org">normalizedString</SubLineNumber>
+                                        <UserArea/>
+                                </PurchaseOrderReference>
+                                <ScheduledDeliveryDateTime>1967-08-13</ScheduledDeliveryDateTime>
+                                <ActualDeliveryDateTime>1967-08-13</ActualDeliveryDateTime>
+                                <ActualShipDateTime>1967-08-13</ActualShipDateTime>
+                                <DistributionCenterCode languageID="en-us" listName="String" listAgencyName="String" listURI="http://www.openapplications.org" listSchemeURI="http://www.openapplications.org" listID="normalizedString" listVersionID="normalizedString" listAgencyID="normalizedString" name="String">normalizedString</DistributionCenterCode>
+                        </SalesOrderLine>
+                </SalesOrder>
+        </DataArea>
+</ProcessSalesOrder>

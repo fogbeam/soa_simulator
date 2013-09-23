@@ -1,0 +1,10 @@
+AddRFQ - Submit a new Request for Quotation
+AcknowledgeRFQ - ack the receipt of the RFQ
+RespondRFQ - submit bid for RFQ
+AddSalesOrder - receive order from customer
+AcknowledgeSalesOrder - ack the receipt of the sales order
+AddPurchaseOrder - receive signed PO from customer
+AcknowledgePurchaseOrder - ack receipt of PO
+ProcessSalesOrder - process the order and prepare to ship
+ProcessShipment - initiate shipping of ordered item(s) to customer
+
