@@ -4,7 +4,7 @@
 <!-- ====================================================================== 
      Feb 9, 2013 7:22:28 PM                                                        
 
-     camel-jms    
+     soa_simulator    
      A little test sender thing to send simulated event messages
                        
      prhodes                                                                
@@ -20,6 +20,15 @@
 	        <include name="**/*.jar"/>
 	      </fileset>
 	</path>	
+	
+	<path id="groovy.classpath">
+		<fileset dir="/usr/groovy/groovy-2.3.11/embeddable/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	
+	<taskdef name="groovyc"
+         classname="org.codehaus.groovy.ant.Groovyc" classpathref="groovy.classpath" />
 	
 	
     <!-- ================================= 
@@ -45,9 +54,9 @@
           target: compile                      
          - - - - - - - - - - - - - - - - - -->
     <target name="compile">
-        <javac srcdir="src" destdir="build/classes" debug="on" source="1.6" includeantruntime="false">
+        <groovyc srcdir="src" destdir="build/classes" >
         	<classpath refid="build.classpath" />
-		</javac>    
+		</groovyc>    
     </target>
 
     <!-- - - - - - - - - - - - - - - - - - 
@@ -81,7 +90,7 @@
     	<jar basedir="build/classes" destfile="build/camel-jms.jar" >
     		<manifest>
     		      <attribute name="Built-By" value="${user.name}" />
-    		      <attribute name="Main-Class" value="org.fogbeam.hatteras.camel.CamelJmsXmlSender" />
+    		      <attribute name="Main-Class" value="org.fogbeam.hatteras.soa_simulator.SOASimulatorMain" />
     		      <!-- finally, use the magically generated libs path -->
     		      <attribute name="Class-Path" value="${libs.project}" />
     		    </manifest>    		
@@ -96,12 +105,21 @@
     		</fileset>
     	</copy>
     	
+    	<copy todir="build/messages">
+    		<fileset dir="messages">
+    			<include name="*.xml" />
+    		</fileset>
+    	</copy>
+    	
     	<copy todir="build/lib">
     		<fileset dir="lib">
     			<include name="*.jar" />
     		</fileset>
     		<fileset dir="lib/jboss-client">
     			<include name="*.jar" />
+    		</fileset>
+    		<fileset dir="/usr/groovy/groovy-2.3.11/embeddable/">
+    			<include name="groovy-all-2.3.11.jar" />
     		</fileset>
     	</copy>
     	
@@ -111,7 +129,7 @@
     		</fileset>
     	</copy>
     	
-    	<zip destfile="dist/camel-jms.zip">	
+    	<zip destfile="dist/soa_simulator.zip">	
     		<fileset dir="build" includes="**/*" excludes="classes/"/>
     	</zip>	
     	
