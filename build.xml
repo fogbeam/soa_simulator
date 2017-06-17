@@ -39,6 +39,7 @@
     	<mkdir dir="build/conf" />
     	<mkdir dir="build/classes" />
     	<mkdir dir="dist" />
+	<mkdir dir="soa_simulator" />
     </target>
 
     <!-- - - - - - - - - - - - - - - - - - 
@@ -47,6 +48,7 @@
     <target name="clean">
     	<delete dir="build" />
     	<delete dir="dist" />
+	<delete dir="soa_simulator" />
     </target>	
 	
 	
@@ -128,9 +130,16 @@
     			<include name="test*.xml" />
     		</fileset>
     	</copy>
+
+	<copy todir="soa_simulator">
+	  <fileset dir="build">
+	    <include name="**" />
+	    <exclude name="classes/" />
+	  </fileset>
+	</copy>
     	
     	<zip destfile="dist/soa_simulator.zip">	
-    		<fileset dir="build" includes="**/*" excludes="classes/"/>
+    		<fileset dir="." includes="soa_simulator/**" />
     	</zip>	
     	
     </target>	

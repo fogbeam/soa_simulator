@@ -32,7 +32,10 @@ class SOASimulatorMain
 		
 			simThread.start();
 		
-			Thread.sleep( 240000 );
+			// increase this initial delay so that (hopefully)
+			// our first subscription will be loaded and waiting before we
+			// send the first batch of messages.
+			Thread.sleep( 720000 );
 		
 			simulator.stopFlag = true;
 			simThread.interrupt();
@@ -40,6 +43,7 @@ class SOASimulatorMain
 			// random pause 
 			int pause = random.nextInt(45)+15;
 			long pauseMillis = pause*60*1000;
+			System.out.println( "delay until next message batch: " + pauseMillis + " milliseconds");
 			Thread.sleep(pauseMillis);
 					
 		}
