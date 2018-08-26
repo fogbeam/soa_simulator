@@ -1,11 +1,5 @@
 package org.fogbeam.hatteras.soa_simulator;
 
-import groovy.xml.XmlUtil
-
-import javax.jms.JMSException
-import javax.jms.Message
-import javax.jms.Session
-
 import org.springframework.context.ApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext
 import org.springframework.jms.core.JmsTemplate
@@ -14,7 +8,7 @@ class SOASimulatorMain
 {	
 	public static void main( String[] args ) throws Exception
 	{	
-		ApplicationContext appContext = new ClassPathXmlApplicationContext( "senderContext.xml" );
+		ApplicationContext appContext = new ClassPathXmlApplicationContext( "senderContext.xml" )
 	
 		JmsTemplate jmsTemplate = appContext.getBean( "jmsTemplate", JmsTemplate.class );
 		
