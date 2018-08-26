@@ -54,6 +54,85 @@ public class SimulatorProcessingThread implements Runnable
 			}
 		};
 		
+		// TODO: send one initial batch of messages with fixed set of values so the demo will have
+		// some deterministic characteristics on initial load
+	
+		// send AddRFQ message
+		String fileName = "messages/AddRFQ.xml";
+		File fXmlFile = new File(fileName);
+		
+		
+		def ns = new groovy.xml.Namespace("http://www.openapplications.org/oagis/9", '');
+		def root = new XmlParser().parse(fXmlFile);
+		
+		// AddRFQ\DataArea\RFQ\RFQHeader\CustomerParty\Name
+		// AddRFQ\DataArea\RFQ\RFQHeader\CustomerParty\PartyIDs\ID
+		// AddRFQ\DataArea\RFQ\RFQHeader\CustomerParty\Location\UserArea\Region
+		
+		def customerParty = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.CustomerParty];
+						
+		def name = customerParty[ns.Name]
+		name[0].value = "Boxer Steel";
+		
+		
+		def customerId = customerParty[ns.PartyIDs][0][ns.ID][0];
+		customerId.value = "CUS729897";
+	
+		def region = customerParty[ns.Location][0][ns.UserArea][0][ns.SalesRegion][0];
+		region.value = "west";
+					
+		// AddRFQ\DataArea\RFQ\RFQHeader\LastModificationDateTime
+		// AddRFQ\DataArea\RFQ\RFQHeader\DocumentDateTime
+		def rfqHeader = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0];
+		def lastModificationDateTime = rfqHeader[ns.LastModificationDateTime][0];
+		def documentDateTime = rfqHeader[ns.DocumentDateTime][0];
+		
+		lastModificationDateTime.value = now;
+		documentDateTime.value = now;
+		
+		
+		// AddRFQ\DataArea\RFQ\RFQHeader\CatalogReference\DocumentID\ID
+		// AddRFQ\DataArea\RFQ\RFQLine\Item\ItemID\ID
+		int randCatalogIndex = random.nextInt( 4 );
+		String catalogId = catalogIds[randCatalogIndex];
+		
+		int randItemIndex = random.nextInt( items.size() );
+		String itemKey = itemKeys[randItemIndex];
+		
+					
+		def catalogIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.CatalogReference][0][ns.DocumentID][0][ns.ID][0];
+		def itemIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQLine][0][ns.Item][0][ns.ItemID][0][ns.ID][0];
+	
+		catalogIdElem.value = catalogId;
+		itemIdElem.value = itemKey;
+		
+		String rfqDocId = java.util.UUID.randomUUID().toString();
+		
+		// AddRFQ\DataArea\RFQ\RFQHeader\DocumentID\ID
+		def documentIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.DocumentID][0][ns.ID][0];
+		documentIdElem.value = rfqDocId;
+		
+		// AddRFQ\DataArea\RFQ\RFQLine\Quantity
+		def lineQuantity = root[ns.DataArea][0][ns.RFQ][0][ns.RFQLine][0][ns.Quantity][0];
+		
+		int rfqLineQuantity = random.nextInt( 30 ) + 1;
+		lineQuantity.value = rfqLineQuantity;
+	
+		
+		def writer = new StringWriter()
+		new XmlNodePrinter(new PrintWriter(writer)).print(root)
+		def xmlString = writer.toString()
+	
+	
+		msgCreator.setData( xmlString.trim() );
+		
+		jmsTemplate.send( "foobar", msgCreator );
+		
+		System.out.println( "sent AddRFQ" );
+
+		
+	
+	
 		while( stopFlag != true )
 		{
 			
@@ -66,36 +145,35 @@ public class SimulatorProcessingThread implements Runnable
 			String randRegion = regions[randRegionKey];
 			
 			
-			
 			// send AddRFQ message
-			String fileName = "messages/AddRFQ.xml";
-			File fXmlFile = new File(fileName);
+			fileName = "messages/AddRFQ.xml";
+			fXmlFile = new File(fileName);
 			
 			
-			def ns = new groovy.xml.Namespace("http://www.openapplications.org/oagis/9", '');
-			def root = new XmlParser().parse(fXmlFile);
+			ns = new groovy.xml.Namespace("http://www.openapplications.org/oagis/9", '');
+			root = new XmlParser().parse(fXmlFile);
 			
 			// AddRFQ\DataArea\RFQ\RFQHeader\CustomerParty\Name
 			// AddRFQ\DataArea\RFQ\RFQHeader\CustomerParty\PartyIDs\ID
 			// AddRFQ\DataArea\RFQ\RFQHeader\CustomerParty\Location\UserArea\Region
 			
-			def customerParty = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.CustomerParty];
+			customerParty = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.CustomerParty];
 							
-			def name = customerParty[ns.Name]
+			name = customerParty[ns.Name]
 			name[0].value = customerName;
 			
 			
-			def customerId = customerParty[ns.PartyIDs][0][ns.ID][0];
+			customerId = customerParty[ns.PartyIDs][0][ns.ID][0];
 			customerId.value = customerKey;
 
-			def region = customerParty[ns.Location][0][ns.UserArea][0][ns.SalesRegion][0];
+			region = customerParty[ns.Location][0][ns.UserArea][0][ns.SalesRegion][0];
 			region.value = randRegion;
 						
 			// AddRFQ\DataArea\RFQ\RFQHeader\LastModificationDateTime
 			// AddRFQ\DataArea\RFQ\RFQHeader\DocumentDateTime
-			def rfqHeader = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0];
-			def lastModificationDateTime = rfqHeader[ns.LastModificationDateTime][0];
-			def documentDateTime = rfqHeader[ns.DocumentDateTime][0];
+			rfqHeader = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0];
+			lastModificationDateTime = rfqHeader[ns.LastModificationDateTime][0];
+			documentDateTime = rfqHeader[ns.DocumentDateTime][0];
 			
 			lastModificationDateTime.value = now;
 			documentDateTime.value = now;
@@ -103,35 +181,35 @@ public class SimulatorProcessingThread implements Runnable
 			
 			// AddRFQ\DataArea\RFQ\RFQHeader\CatalogReference\DocumentID\ID
 			// AddRFQ\DataArea\RFQ\RFQLine\Item\ItemID\ID
-			int randCatalogIndex = random.nextInt( 4 );
-			String catalogId = catalogIds[randCatalogIndex];
+			randCatalogIndex = random.nextInt( 4 );
+			catalogId = catalogIds[randCatalogIndex];
 			
-			int randItemIndex = random.nextInt( items.size() );
-			String itemKey = itemKeys[randItemIndex];
+			randItemIndex = random.nextInt( items.size() );
+			itemKey = itemKeys[randItemIndex];
 			
 						
-			def catalogIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.CatalogReference][0][ns.DocumentID][0][ns.ID][0];
-			def itemIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQLine][0][ns.Item][0][ns.ItemID][0][ns.ID][0];
+			catalogIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.CatalogReference][0][ns.DocumentID][0][ns.ID][0];
+			itemIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQLine][0][ns.Item][0][ns.ItemID][0][ns.ID][0];
 
 			catalogIdElem.value = catalogId;
 			itemIdElem.value = itemKey;
 			
-			String rfqDocId = java.util.UUID.randomUUID().toString();
+			rfqDocId = java.util.UUID.randomUUID().toString();
 			
 			// AddRFQ\DataArea\RFQ\RFQHeader\DocumentID\ID
-			def documentIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.DocumentID][0][ns.ID][0];
+			documentIdElem = root[ns.DataArea][0][ns.RFQ][0][ns.RFQHeader][0][ns.DocumentID][0][ns.ID][0];
 			documentIdElem.value = rfqDocId;
 			
 			// AddRFQ\DataArea\RFQ\RFQLine\Quantity			
-			def lineQuantity = root[ns.DataArea][0][ns.RFQ][0][ns.RFQLine][0][ns.Quantity][0];
+			lineQuantity = root[ns.DataArea][0][ns.RFQ][0][ns.RFQLine][0][ns.Quantity][0];
 			
-			int rfqLineQuantity = random.nextInt( 30 ) + 1;
+			rfqLineQuantity = random.nextInt( 30 ) + 1;
 			lineQuantity.value = rfqLineQuantity;
 
 			
-			def writer = new StringWriter()
+			writer = new StringWriter()
 			new XmlNodePrinter(new PrintWriter(writer)).print(root)
-			def xmlString = writer.toString()
+			xmlString = writer.toString()
 			
 			
 			msgCreator.setData( xmlString.trim() );
@@ -154,9 +232,7 @@ public class SimulatorProcessingThread implements Runnable
 				{
 					break;
 				}	
-			}
-			
-			
+			}	
 			
 			// send AcknowledgeRFQ message
 			fileName = "messages/AcknowledgeRFQ.xml";
@@ -185,8 +261,6 @@ public class SimulatorProcessingThread implements Runnable
 
 			System.out.println( "sent AcknowledgeRFQ" );
 		
-			
-			
 			// random pause
 			pauseInterval = random.nextInt( 25000 ) + 5001;
 			try
@@ -199,9 +273,7 @@ public class SimulatorProcessingThread implements Runnable
 				{
 					break;
 				}
-			}
-			
-			
+			}	
 			
 			// send RespondRFQ message
 			fileName = "messages/RespondRFQ.xml";
@@ -247,7 +319,6 @@ public class SimulatorProcessingThread implements Runnable
 			jmsTemplate.send( "foobar", msgCreator );
 			
 			System.out.println( "sent RespondRFQ" );
-			
 			
 			
 			// random pause
@@ -448,8 +519,7 @@ public class SimulatorProcessingThread implements Runnable
 			
 			System.out.println( "sent AddSalesOrder" );
 			
-			
-			
+	
 			// random pause
 			pauseInterval = random.nextInt( 25000 ) + 5001;
 			try
